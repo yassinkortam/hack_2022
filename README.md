@@ -15,3 +15,8 @@ Manipulates the drive system to implement user inputs, i.e. drives forwards, bac
 ## main.cpp
 
 Driver program. Takes user inputs and executes functions from the above header files.
+
+##display.into
+
+Displays facial 
+expressions on LCD
