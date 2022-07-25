@@ -16,7 +16,7 @@ Manipulates the drive system to implement user inputs, i.e. drives forwards, bac
 
 Driver program. Takes user inputs and executes functions from the above header files.
 
-##display.into
+## display.ino
 
 Displays facial 
 expressions on LCD
