@@ -1,5 +1,10 @@
 # Alien Years
 
+## Introduction
+
+The goal of this hackathon was to create a steerable rover with a robotic arm that can be controlled via bluetooth. 
+https://etransfercenter.seas.ucla.edu/hack-2022/
+
 ## const.h
 
 contains all the constant value variables for the program (pinouts, hardware specs, etc).
