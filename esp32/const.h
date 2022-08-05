@@ -1,4 +1,3 @@
-//Alien Years | Yassin Kortam
 //Pin Definitions
 //Drive motors
 #define M1R 12 //orientation control 1 right
@@ -11,13 +10,14 @@
 //Servo motors
 #define SR 26
 #define SL 25
-#define SR_MAX 120
+#define S_MAX 180
 #define S_TRANS 100
 
 //Drive constants
 #define W 7 //expirementally derived angular velocity
 #define V_MAX 240 //highest possible analog output for velocity
 #define V_TURN 240 //turning velocity
+#define V_DELAY 50 //delay in velocity change
 
 //User input constants
 #define V_INC 20 //user input velocity increments
