@@ -60,7 +60,7 @@ void dance(){
 
     for (int i=0; i<8; i++){
         if (i%2 == 0){
-            s_r = SR_MAX;
+            s_r = S_MAX;
         }else{
             s_r = 0;
         }
@@ -85,48 +85,69 @@ void loop() {
   int cmd = SerialBT.read(); //Read user input
 
   if (cmd == 119){ //W
-    v += V_INC;
-    control();
-    troubleshoot(cmd);
+    while (cmd != 114){
+      v += V_INC;
+      control();
+      troubleshoot(cmd);
+      cmd = SerialBT.read();
+    }
   }
   if (cmd == 97){ //A
-    rad += R_INC;
-    troubleshoot(cmd);
-    control();
+    while (cmd != 114){
+      rad += R_INC;
+      troubleshoot(cmd);
+      control();
+      cmd = SerialBT.read();
+    }
   }
   if (cmd == 115){ //S
-    v -= V_INC;
-    control();
-    troubleshoot(cmd);
+    while (cmd != 114){
+      v -= V_INC;
+      control();
+      troubleshoot(cmd);
+      cmd = SerialBT.read();
+    }
   }
   if (cmd == 100){ //D
-    rad -= R_INC;
-    troubleshoot(cmd);
-    control();
+    while (cmd != 114){
+      rad -= R_INC;
+      troubleshoot(cmd);
+      control();
+      cmd = SerialBT.read();
+    }
   }
   if (cmd == 112){ //P
-    rad_sr += S_INC;
-    initialize();
-    sr.write(rad_sr);
-    delay(S_TRANS);
+    while (cmd != 114){
+      rad_sr += S_INC;
+      initialize();
+      sr.write(rad_sr);
+      delay(S_TRANS);
+      cmd = SerialBT.read();
+    }
   }
   if (cmd == 108){ //L
-    rad_sr -= S_INC;
-    initialize();
-    sr.write(rad_sr);
-    delay(S_TRANS);
+    while (cmd != 114){
+      rad_sr -= S_INC;
+      initialize();
+      sr.write(rad_sr);
+      delay(S_TRANS);
+    }
   }
   if (cmd == 111){ //O
-    rad_sl -= S_INC;
-    initialize();
-    sl.write(rad_sl);
-    delay(S_TRANS);
+    while (cmd != 114){
+      rad_sl -= S_INC;
+      initialize();
+      sl.write(rad_sl);
+      delay(S_TRANS);
+    }
   }
   if (cmd == 107){ //K
-    rad_sl += S_INC;
-    initialize();
-    sl.write(rad_sl);
-    delay(S_TRANS);
+    while (cmd != 114){
+      rad_sl += S_INC;
+      initialize();
+      sl.write(rad_sl);
+      delay(S_TRANS);
+    }
   }
   if (cmd == 109){//M
     dance();
