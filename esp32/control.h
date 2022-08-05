@@ -1,4 +1,5 @@
 //Alien Years | Yassin Kortam
+
 #ifndef ARDUINO_H
 #define ARDUINO_H
 #include <Arduino.h>
@@ -57,6 +58,7 @@ void forward(){
         digitalWrite(M2L, LOW);
         analogWrite(ER, abs(v));
         analogWrite(EL, abs(v));
+        delay(V_DELAY);
     }
 }
 
@@ -68,6 +70,7 @@ void reverse(){
         digitalWrite(M2L, HIGH);
         analogWrite(ER, abs(v));
         analogWrite(EL, abs(v));
+        delay(V_DELAY);
     }
 }
 
@@ -79,5 +82,6 @@ void stop(){
         digitalWrite(M2L, LOW);
         analogWrite(ER, 0);
         analogWrite(EL, 0);
+        delay(V_DELAY);
     }
 }
