@@ -29,14 +29,14 @@ void initialize(){
     }
     t = abs(rad/W)*1000;
 
-    if (rad_sr > 180){
-        rad_sr = 180;
+    if (rad_sr > S_MAX){
+        rad_sr = S_MAX;
     }
     if (rad_sr < 0){
         rad_sr = 0;
     }
-    if (rad_sl > 180){
-        rad_sl = 180;
+    if (rad_sl > S_MAX){
+        rad_sl = S_MAX;
     }
     if (rad_sl < 0){
         rad_sl = 0;
