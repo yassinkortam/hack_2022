@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The goal of this hackathon was to create a steerable rover with a robotic arm that can be controlled via bluetooth. This project was completed in 3 days.
+The goal of this hackathon was to create a steerable rover with a robotic arm that can be controlled via bluetooth. This project was completed in 3 days. Note that the code has been edited since the end of the competition, and is currently being improved.
 
 https://etransfercenter.seas.ucla.edu/hack-2022/
 
