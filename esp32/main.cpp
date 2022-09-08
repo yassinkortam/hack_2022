@@ -85,69 +85,48 @@ void loop() {
   int cmd = SerialBT.read(); //Read user input
 
   if (cmd == 119){ //W
-    while (cmd != 114){
       v += V_INC;
       control();
       troubleshoot(cmd);
-      cmd = SerialBT.read();
-    }
   }
   if (cmd == 97){ //A
-    while (cmd != 114){
       rad += R_INC;
       troubleshoot(cmd);
       control();
-      cmd = SerialBT.read();
-    }
   }
   if (cmd == 115){ //S
-    while (cmd != 114){
       v -= V_INC;
       control();
       troubleshoot(cmd);
-      cmd = SerialBT.read();
-    }
   }
   if (cmd == 100){ //D
-    while (cmd != 114){
       rad -= R_INC;
       troubleshoot(cmd);
       control();
-      cmd = SerialBT.read();
-    }
   }
   if (cmd == 112){ //P
-    while (cmd != 114){
       rad_sr += S_INC;
       initialize();
       sr.write(rad_sr);
       delay(S_TRANS);
-      cmd = SerialBT.read();
-    }
   }
   if (cmd == 108){ //L
-    while (cmd != 114){
       rad_sr -= S_INC;
       initialize();
       sr.write(rad_sr);
       delay(S_TRANS);
-    }
   }
   if (cmd == 111){ //O
-    while (cmd != 114){
       rad_sl -= S_INC;
       initialize();
       sl.write(rad_sl);
       delay(S_TRANS);
-    }
   }
   if (cmd == 107){ //K
-    while (cmd != 114){
       rad_sl += S_INC;
       initialize();
       sl.write(rad_sl);
       delay(S_TRANS);
-    }
   }
   if (cmd == 109){//M
     dance();
